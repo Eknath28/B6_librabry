@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}  
+    <ol class="nav flex-column">  
+        
+        {% for object in object_list %}  
+        <!-- Django Template Language -->  
+        <li class="nav-item">First Name: {{ object.first_name }}</li>  
+        <li class="nav-item">Last Name: {{ object.last_name }}</li>  
+        <li class="nav-item">Mobile: {{ object.mobile }}</li>  
+        <li class="nav-item"> Email: {{ object.email }}</li>  
+        
+        <hr/>  
+         
+        {% empty %}  
+        <li class="nav-item">No objects Find</li>  
+
+        {% endfor %}  
+    </ol>  
+  
+{% endblock content %}  
